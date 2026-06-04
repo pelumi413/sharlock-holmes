@@ -110,46 +110,160 @@
     </section>
 
     <section class="section section--alt" id="volunteer">
-      <div class="container split" style="grid-template-columns:1fr 1fr">
-        <div class="split-content reveal">
-          <span class="eyebrow">Volunteer</span>
-          <h2>Bring <span class="accent">your skills</span> to the work.</h2>
-          <p>We're not looking for tourists — we're looking for people who'll commit to a real role and stick with us. Most volunteer roles are remote-friendly with one optional field visit per year.</p>
-          <ul class="split-list">
-            <li><span class="check">✓</span><div><strong>Mentorship</strong><p>1 hour / month with a RAP Scholar</p></div></li>
-            <li><span class="check">✓</span><div><strong>Skills volunteering</strong><p>Design, legal, finance, web, M&amp;E</p></div></li>
-            <li><span class="check">✓</span><div><strong>Campaign support</strong><p>Writing, social, research for advocacy work</p></div></li>
-            <li><span class="check">✓</span><div><strong>Field volunteer</strong><p>For Nigeria-based volunteers, 6+ months commitment</p></div></li>
-          </ul>
-          <a class="btn btn-primary" href="contact.html">Apply to volunteer</a>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Volunteer with us</span>
+          <h2>Volunteer registration</h2>
+          <p>Thank you for your interest in joining the <strong>RAP Initiative</strong>. Our mission is to create safer roads in Nigeria through education, advocacy, and community engagement. By volunteering, you are helping individuals make life-saving choices and reducing road accidents.</p>
         </div>
 
-        <form class="form-card reveal" data-demo aria-label="Quick volunteer interest form">
-          <h3 style="margin-top:0">Quick interest form</h3>
-          <p style="margin-top:0;color:var(--muted)">Tell us a little about you — we'll follow up within a week.</p>
-          <div class="form-grid">
-            <div class="field"><label for="vname">Full name</label><input id="vname" name="name" required /></div>
-            <div class="field"><label for="vemail">Email</label><input id="vemail" type="email" name="email" required /></div>
-            <div class="field full">
-              <label for="vrole">I'm interested in…</label>
-              <select id="vrole" name="role">
-                <option>Mentorship</option>
-                <option>Skills volunteering (specify below)</option>
-                <option>Campaign / advocacy support</option>
-                <option>Field volunteer (Nigeria)</option>
-                <option>Not sure yet — let's chat</option>
+        <form class="form-card volunteer-form reveal" data-demo aria-label="Volunteer registration form" action="#" method="POST">
+
+          <!-- 01 Personal Information -->
+          <fieldset class="form-fieldset">
+            <legend><span class="leg-num">01</span> Personal information</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" name="fullname" autocomplete="name" required aria-required="true" />
+              </div>
+              <div class="field">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob" required aria-required="true" />
+              </div>
+              <div class="field">
+                <label id="gender-label">Gender</label>
+                <div class="radio-list is-inline" role="radiogroup" aria-labelledby="gender-label">
+                  <label class="radio-label"><input type="radio" name="gender" value="male" required aria-required="true" /> Male</label>
+                  <label class="radio-label"><input type="radio" name="gender" value="female" /> Female</label>
+                  <label class="radio-label"><input type="radio" name="gender" value="other" /> Prefer not to say</label>
+                </div>
+              </div>
+              <div class="field">
+                <label for="occupation">Current occupation</label>
+                <input type="text" id="occupation" name="occupation" autocomplete="organization-title" required aria-required="true" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 02 Contact Details -->
+          <fieldset class="form-fieldset">
+            <legend><span class="leg-num">02</span> Contact details</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required aria-required="true" />
+              </div>
+              <div class="field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" />
+              </div>
+              <div class="field full">
+                <label for="address">Residential address</label>
+                <input type="text" id="address" name="address" autocomplete="street-address" required aria-required="true" />
+              </div>
+              <div class="field full">
+                <label for="location">Preferred location for volunteering</label>
+                <select id="location" name="location" required aria-required="true">
+                  <option value="">— Select a location —</option>
+                  <option value="abuja">Abuja (Wuse 2)</option>
+                  <option value="ibadan">Ibadan (Basorun Road)</option>
+                  <option value="remote">Remote / online</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 03 Areas of Interest & Skills -->
+          <fieldset class="form-fieldset">
+            <legend><span class="leg-num">03</span> Areas of interest &amp; skills</legend>
+            <p class="fieldset-help">Which of our core areas would you like to support? Select all that apply.</p>
+            <div class="checkbox-list">
+              <label class="check-label"><input type="checkbox" name="interest[]" value="education" /> <span><strong>Road Safety Education</strong> — conducting school or community workshops.</span></label>
+              <label class="check-label"><input type="checkbox" name="interest[]" value="campaigns" /> <span><strong>Campaigns &amp; Advocacy</strong> — participating in public safety rallies and awareness drives.</span></label>
+              <label class="check-label"><input type="checkbox" name="interest[]" value="events" /> <span><strong>Event Planning</strong> — assisting in organising community events and seminars.</span></label>
+              <label class="check-label"><input type="checkbox" name="interest[]" value="media" /> <span><strong>Media &amp; Communications</strong> — content writing, graphic design, or photography.</span></label>
+              <label class="check-label"><input type="checkbox" name="interest[]" value="social_media" /> <span><strong>Social Media Management</strong> — spreading awareness via online platforms.</span></label>
+              <label class="check-label"><input type="checkbox" name="interest[]" value="admin" /> <span><strong>Administrative Support</strong> — data entry, coordination, and office assistance.</span></label>
+            </div>
+          </fieldset>
+
+          <!-- 04 Experience & Availability -->
+          <fieldset class="form-fieldset">
+            <legend><span class="leg-num">04</span> Experience &amp; availability</legend>
+            <div class="field">
+              <label id="exp-label">Do you have prior volunteering experience?</label>
+              <div class="radio-list is-inline" role="radiogroup" aria-labelledby="exp-label">
+                <label class="radio-label"><input type="radio" name="experience" value="yes" /> Yes</label>
+                <label class="radio-label"><input type="radio" name="experience" value="no" /> No</label>
+              </div>
+            </div>
+            <div class="field" style="margin-top:1rem">
+              <label for="exp_details">If yes, please briefly describe your past role(s)</label>
+              <textarea id="exp_details" name="exp_details" rows="3" placeholder="Organisation, role, dates…"></textarea>
+            </div>
+            <div class="field" style="margin-top:1rem">
+              <label>What is your general availability? (Select all that apply.)</label>
+              <div class="checkbox-list">
+                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_mornings" /> Weekday mornings</label>
+                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_afternoons" /> Weekday afternoons</label>
+                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_evenings" /> Weekday evenings</label>
+                <label class="check-label"><input type="checkbox" name="availability[]" value="weekends" /> Weekends</label>
+                <label class="check-label"><input type="checkbox" name="availability[]" value="flexible" /> Flexible — can adjust to need</label>
+              </div>
+            </div>
+            <div class="field" style="margin-top:1rem">
+              <label for="hours">How many hours per week can you typically commit?</label>
+              <select id="hours" name="hours">
+                <option value="">— Select —</option>
+                <option>1–5 hours</option>
+                <option>5–10 hours</option>
+                <option>10–20 hours</option>
+                <option>20+ hours</option>
+                <option>Flexible</option>
               </select>
             </div>
-            <div class="field full">
-              <label for="vmsg">Anything else?</label>
-              <textarea id="vmsg" name="message" placeholder="Skills you'd bring, time you can give, etc."></textarea>
+          </fieldset>
+
+          <!-- 05 Motivation -->
+          <fieldset class="form-fieldset">
+            <legend><span class="leg-num">05</span> Why volunteer with RAP?</legend>
+            <div class="field">
+              <label for="motivation">In a few sentences, tell us what draws you to road safety advocacy and what you hope to contribute.</label>
+              <textarea id="motivation" name="motivation" rows="5" required aria-required="true"></textarea>
             </div>
-            <div class="full">
-              <button type="submit" class="btn btn-primary">Send</button>
-              <p class="form-status" style="margin-top:.5rem; font-size:.9rem;"></p>
+            <div class="field" style="margin-top:1rem">
+              <label for="referral">How did you hear about RAP Initiative? <span style="font-weight:500;color:var(--muted)">(optional)</span></label>
+              <input type="text" id="referral" name="referral" placeholder="Social media, friend, event, etc." />
             </div>
+          </fieldset>
+
+          <!-- Declaration -->
+          <div class="declaration">
+            <strong>Declaration.</strong>
+            I confirm that the information provided above is accurate to the best of my knowledge. I understand that by volunteering with the RAP Initiative, I am committing to upholding the organisation's values of safety, dignity, and integrity. I consent to RAP Initiative storing my data for the purpose of volunteer coordination, in line with applicable data-protection laws.
+            <label><input type="checkbox" name="agree" required aria-required="true" /> I agree to the declaration above.</label>
           </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center">Submit registration</button>
+          <p class="form-status" style="margin-top:.75rem; font-size:.9rem; text-align:center"></p>
         </form>
+
+        <!-- Office info -->
+        <div class="office-grid reveal">
+          <div class="office-card">
+            <h4>Abuja office</h4>
+            <p>Wuse 2, Abuja, FCT</p>
+          </div>
+          <div class="office-card">
+            <h4>Ibadan office</h4>
+            <p>Basorun Road, Ibadan, Oyo State</p>
+          </div>
+          <div class="office-card">
+            <h4>Volunteer enquiries</h4>
+            <p><a href="mailto:volunteer@rapinitiative.org">volunteer@rapinitiative.org</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
