@@ -8,26 +8,15 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
   <header class="site-header">
     <nav class="nav-inner">
       <a href="index.html" class="nav-logo">RAP<span>Initiative</span></a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="campaigns.html">Campaigns</a>
-        <a href="news.html">News</a>
-        <a href="safety-talks.html">Safety Talks</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="get-involved.html" class="donate-btn">Donate</a>
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="campaigns.html">Campaigns</a><a href="news.html">News</a><a href="safety-talks.html">Safety Talks</a><a href="contact.html" class="active">Contact</a><a href="get-involved.html" class="donate-btn">Donate</a>
       </div>
     </nav>
   </header>
-
-  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-inner">
       <span class="section-label">Reach Out</span>
@@ -35,114 +24,36 @@
       <p>Whether you're a partner organisation, media professional, donor, or passionate citizen — we'd love to hear from you.</p>
     </div>
   </section>
-
-  <!-- CONTACT CONTENT -->
   <section class="contact-page">
     <div class="contact-page-inner">
-
-      <!-- LEFT: OFFICES -->
       <div class="reveal">
         <div class="offices" style="margin-bottom:3rem;">
-          <div class="office">
-            <h4>Abuja Office</h4>
-            <p>3 Albara Street, off Cairo Street,<br>off Adetokunbo Ademola Crescent,<br>Wuse 2, Abuja</p>
-            <p><a href="tel:+2348013586840">+234 (0) 801 3586 840</a></p>
-          </div>
-          <div class="office" style="margin-top:2rem;">
-            <h4>Ibadan Office</h4>
-            <p>Last Floor, Ijamoye House,<br>opposite Islamiyah High School,<br>Ado Junction, Basorun Road, Ibadan</p>
-            <p><a href="tel:+2348053773513">+234 (0) 805 377 3513</a></p>
-          </div>
-          <div class="office" style="margin-top:2rem;">
-            <h4>Email</h4>
-            <p>General enquiries:<br><a href="mailto:info@rapinitiative.org">info@rapinitiative.org</a></p>
-            <p style="margin-top:0.5rem;">Volunteering:<br><a href="mailto:rapinitiative@rapinitiative.org">rapinitiative@rapinitiative.org</a></p>
-          </div>
+          <div class="office"><h4>Abuja Office</h4><p>3 Albara Street, off Cairo Street,<br>off Adetokunbo Ademola Crescent,<br>Wuse 2, Abuja</p><p><a href="tel:+2348013586840">+234 (0) 801 3586 840</a></p></div>
+          <div class="office" style="margin-top:2rem;"><h4>Ibadan Office</h4><p>Last Floor, Ijamoye House,<br>opposite Islamiyah High School,<br>Ado Junction, Basorun Road, Ibadan</p><p><a href="tel:+2348053773513">+234 (0) 805 377 3513</a></p></div>
+          <div class="office" style="margin-top:2rem;"><h4>Email</h4><p>General enquiries:<br><a href="mailto:info@rapinitiative.org">info@rapinitiative.org</a></p><p style="margin-top:0.5rem;">Volunteering:<br><a href="mailto:rapinitiative@rapinitiative.org">rapinitiative@rapinitiative.org</a></p></div>
         </div>
-
-        <div>
-          <h4 style="font-family:'Oswald',sans-serif; font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold); margin-bottom:1rem;">Office Hours</h4>
-          <p style="color:var(--light-gray); font-size:0.9rem; line-height:1.7;">Monday – Friday: 9:00am – 5:00pm<br>Saturday: 10:00am – 2:00pm<br>Sunday: Closed</p>
-        </div>
+        <div><h4 style="font-family:'Oswald',sans-serif;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;">Office Hours</h4><p style="color:var(--light-gray);font-size:0.9rem;line-height:1.7;">Monday – Friday: 9:00am – 5:00pm<br>Saturday: 10:00am – 2:00pm<br>Sunday: Closed</p></div>
       </div>
-
-      <!-- RIGHT: FORM -->
       <div class="contact-form-wrap reveal">
         <span class="section-label">Send a Message</span>
         <h3>How Can We Help?</h3>
         <form class="contact-form" style="margin-top:1.5rem;" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-          </div>
+          <div class="form-row"><input type="text" placeholder="First Name" required /><input type="text" placeholder="Last Name" required /></div>
           <input type="email" placeholder="Email Address" required />
           <input type="tel" placeholder="Phone Number (optional)" />
           <input type="text" placeholder="Organisation (optional)" />
           <input type="text" placeholder="Subject" required />
           <textarea placeholder="Your message…" required></textarea>
           <button type="submit" class="btn btn-gold">Send Message</button>
-          <p id="form-msg" style="display:none; color:var(--gold); font-size:0.9rem; margin-top:0.5rem;"></p>
+          <p id="form-msg" style="display:none;color:var(--gold);font-size:0.9rem;margin-top:0.5rem;"></p>
         </form>
       </div>
-
     </div>
   </section>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">RAP<span>Initiative</span></a>
-          <p>Promoting safer roads across Nigeria through evidence-based campaigns, education, and community engagement.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="campaigns.html">Campaigns</a></li>
-            <li><a href="news.html">News</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Programmes</h4>
-          <ul>
-            <li><a href="safety-talks.html">Safety Talks</a></li>
-            <li><a href="campaigns.html#buckle-up">Buckle Up</a></li>
-            <li><a href="campaigns.html#cross-safely">Cross Safely</a></li>
-            <li><a href="campaigns.html#slow-down">Slow Down</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="get-involved.html">Donate</a></li>
-            <li><a href="mailto:info@rapinitiative.org">Email Us</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Road Accident Prevention Initiative. All rights reserved.</p>
-        <p>Built with purpose — <a href="contact.html">get involved</a></p>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><a href="index.html" class="nav-logo">RAP<span>Initiative</span></a><p>Promoting safer roads across Nigeria through evidence-based campaigns, education, and community engagement.</p></div><div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="campaigns.html">Campaigns</a></li><li><a href="news.html">News</a></li></ul></div><div class="footer-col"><h4>Programmes</h4><ul><li><a href="safety-talks.html">Safety Talks</a></li><li><a href="campaigns.html#buckle-up">Buckle Up</a></li><li><a href="campaigns.html#cross-safely">Cross Safely</a></li><li><a href="campaigns.html#slow-down">Slow Down</a></li></ul></div><div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="get-involved.html">Donate</a></li><li><a href="mailto:info@rapinitiative.org">Email Us</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2024 Road Accident Prevention Initiative. All rights reserved.</p><p>Built with purpose &mdash; <a href="contact.html">get involved</a></p></div></div></footer>
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    function handleSubmit(e) {
-      e.preventDefault();
-      const msg = document.getElementById('form-msg');
-      msg.textContent = 'Thank you for your message. We\'ll be in touch shortly.';
-      msg.style.display = 'block';
-      e.target.reset();
-    }
+    const observer=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    function handleSubmit(e){e.preventDefault();const msg=document.getElementById('form-msg');msg.textContent='Thank you for your message. We\'ll be in touch shortly.';msg.style.display='block';e.target.reset();}
   </script>
 </body>
 </html>
