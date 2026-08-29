@@ -116,4 +116,122 @@
   document.querySelectorAll('[data-year]').forEach((el) => {
     el.textContent = new Date().getFullYear();
   });
+
+  // ---- Article system ----
+  const CARD_THEMES = ['a', 'b', 'c'];
+
+  function formatDate(iso) {
+    const d = new Date(iso + 'T00:00:00');
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  function cardHTML(article, idx) {
+    const theme = CARD_THEMES[idx % CARD_THEMES.length];
+    const mediaInner = article.image
+      ? `<img src="${article.image}" alt="${article.imageAlt || article.title}">`
+      : `<span class="card-tag">${article.category}</span>${article.title.split(' ').slice(0, 3).join(' ').toUpperCase()}`;
+    return `
+      <article class="card">
+        <div class="card-media ${theme}">${mediaInner}</div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span>${formatDate(article.date)}</span>
+            <span>·</span>
+            <span>${article.readTime} read</span>
+          </div>
+          <h3>${article.title}</h3>
+          <p>${article.excerpt}</p>
+          <a class="btn-link" href="article.html?id=${article.id}">Read more →</a>
+        </div>
+      </article>`;
+  }
+
+  async function loadArticles() {
+    try {
+      const res = await fetch('data/articles.json');
+      if (!res.ok) throw new Error('not found');
+      return await res.json();
+    } catch (e) {
+      return [];
+    }
+  }
+
+  // Home page — latest 3 articles
+  const newsGrid = document.getElementById('news-grid');
+  if (newsGrid) {
+    loadArticles().then((articles) => {
+      if (!articles.length) return;
+      newsGrid.innerHTML = articles.slice(0, 3).map((a, i) => cardHTML(a, i)).join('');
+    });
+  }
+
+  // News listing page — all articles with filter
+  const allNewsGrid = document.getElementById('all-news-grid');
+  if (allNewsGrid) {
+    let allArticles = [];
+    let activeFilter = 'all';
+
+    function renderFiltered() {
+      const list = activeFilter === 'all'
+        ? allArticles
+        : allArticles.filter((a) => a.category.toLowerCase() === activeFilter);
+      allNewsGrid.innerHTML = list.length
+        ? list.map((a, i) => cardHTML(a, i)).join('')
+        : '<p style="color:var(--muted);grid-column:1/-1">No articles in this category yet.</p>';
+    }
+
+    document.querySelectorAll('[data-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-filter]').forEach((b) => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        activeFilter = btn.dataset.filter;
+        renderFiltered();
+      });
+    });
+
+    loadArticles().then((articles) => {
+      allArticles = articles;
+      renderFiltered();
+    });
+  }
+
+  // Single article page
+  const articleBodyEl = document.getElementById('article-body');
+  if (articleBodyEl) {
+    const params = new URLSearchParams(window.location.search);
+    const articleId = params.get('id');
+
+    loadArticles().then((articles) => {
+      const article = articles.find((a) => a.id === articleId);
+      if (!article) {
+        articleBodyEl.innerHTML = '<p>Article not found. <a href="news.html">Back to news →</a></p>';
+        return;
+      }
+
+      document.title = article.title + ' — RAP Initiative';
+      const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+      setEl('article-title', article.title);
+      setEl('article-date', formatDate(article.date));
+      setEl('article-category', article.category);
+      setEl('article-category-tag', article.category);
+      setEl('article-author', 'By ' + article.author);
+      setEl('article-readtime', article.readTime + ' read');
+
+      let html = '';
+      if (article.image) {
+        html += `<figure class="article-figure"><img src="${article.image}" alt="${article.imageAlt || article.title}"><figcaption>${article.imageAlt || ''}</figcaption></figure>`;
+      }
+      if (article.youtube) {
+        html += `<div class="article-video"><iframe src="https://www.youtube-nocookie.com/embed/${article.youtube}" title="Video" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+      }
+      html += article.paragraphs.map((p) => `<p>${p}</p>`).join('');
+      articleBodyEl.innerHTML = html;
+
+      const relatedGrid = document.getElementById('related-grid');
+      if (relatedGrid) {
+        const related = articles.filter((a) => a.id !== articleId).slice(0, 3);
+        relatedGrid.innerHTML = related.map((a, i) => cardHTML(a, i)).join('');
+      }
+    });
+  }
 })();

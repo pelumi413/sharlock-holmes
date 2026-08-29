@@ -42,6 +42,7 @@
         <a href="index.html" class="is-active">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
+        <a href="news.html">News</a>
         <a href="get-involved.html">Get Involved</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -103,12 +104,9 @@
             </defs>
             <rect width="400" height="500" fill="url(#hg2)"/>
             <circle cx="320" cy="120" r="160" fill="url(#hg1)"/>
-            <!-- Stylised road + community -->
             <g fill="rgba(255,255,255,.92)">
-              <!-- road shape -->
               <path d="M40 470 L160 200 L240 200 L360 470 Z" fill="rgba(0,0,0,.15)"/>
               <path d="M180 470 L196 200 L204 200 L220 470 Z" fill="rgba(255,255,255,.7)" stroke="rgba(255,255,255,.95)" stroke-dasharray="10 14" stroke-width="2"/>
-              <!-- people -->
               <circle cx="110" cy="160" r="22"/>
               <path d="M75 220 q35 -36 70 0 v40 h-70 z"/>
               <circle cx="290" cy="160" r="22"/>
@@ -116,7 +114,6 @@
               <circle cx="200" cy="120" r="18"/>
               <path d="M172 168 q28 -30 56 0 v32 h-56 z"/>
             </g>
-            <!-- Orbit ring -->
             <circle cx="200" cy="250" r="190" fill="none" stroke="rgba(255,255,255,.18)" stroke-dasharray="4 8" stroke-width="2"/>
           </svg>
 
@@ -195,7 +192,7 @@
         <div class="split-image reveal" aria-hidden="true">
           <div class="floater">Every · Journey · Home</div>
           <div class="quote-card">
-            <div class="q-icon">"</div>
+            <div class="q-icon">“</div>
             <div>
               <p>Before the workshop I drove like the road belonged to me. Now I drive like my family is in every other car.</p>
               <cite>— Ibrahim, commercial driver · Abuja</cite>
@@ -361,7 +358,7 @@
         <div class="stories">
           <article class="story reveal">
             <div class="stars">★★★★★</div>
-            <p>"My students don't just memorise rules — they correct me at home about my seatbelt. That's the lesson sinking in."</p>
+            <p>“My students don’t just memorise rules — they correct me at home about my seatbelt. That’s the lesson sinking in.”</p>
             <div class="story-author">
               <span class="avatar">A</span>
               <div>
@@ -372,7 +369,7 @@
           </article>
           <article class="story reveal">
             <div class="stars">★★★★★</div>
-            <p>"Before the RAP workshop I drove like the road belonged to me. Now I drive like my family is in every other car."</p>
+            <p>“Before the RAP workshop I drove like the road belonged to me. Now I drive like my family is in every other car.”</p>
             <div class="story-author">
               <span class="avatar b">I</span>
               <div>
@@ -383,7 +380,7 @@
           </article>
           <article class="story reveal">
             <div class="stars">★★★★★</div>
-            <p>"RAP's black-spot data was the evidence we needed to push through the pedestrian crossing budget. Their advocacy work is sharp."</p>
+            <p>“RAP’s black-spot data was the evidence we needed to push through the pedestrian crossing budget. Their advocacy work is sharp.”</p>
             <div class="story-author">
               <span class="avatar c">T</span>
               <div>
@@ -404,45 +401,10 @@
             <span class="eyebrow">Latest</span>
             <h2 style="margin:0">News &amp; updates</h2>
           </div>
-          <a class="btn-link" href="#">View all stories →</a>
+          <a class="btn-link" href="news.html">View all stories →</a>
         </div>
-        <div class="cards-grid">
-          <article class="card reveal">
-            <div class="card-media a">
-              <span class="card-tag">Report</span>
-              IMPACT 2026
-            </div>
-            <div class="card-body">
-              <div class="card-meta"><span>April 22, 2026</span><span>·</span><span>5 min read</span></div>
-              <h3>Our 2026 Road Safety Impact Report</h3>
-              <p>How 64 communities, 4,500 drivers, and 28,000 students moved Nigerian roads forward this year.</p>
-              <a class="btn-link" href="#">Read the report →</a>
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-media b">
-              <span class="card-tag">Story</span>
-              SAFER DRIVERS
-            </div>
-            <div class="card-body">
-              <div class="card-meta"><span>March 14, 2026</span><span>·</span><span>3 min read</span></div>
-              <h3>Inside Safer Drivers: 12 motor parks, one safer ride home</h3>
-              <p>A look at our latest driver training cohort — what they learned, what changed, and what's next.</p>
-              <a class="btn-link" href="#">Read more →</a>
-            </div>
-          </article>
-          <article class="card reveal">
-            <div class="card-media c">
-              <span class="card-tag">News</span>
-              PARTNERS
-            </div>
-            <div class="card-body">
-              <div class="card-meta"><span>February 02, 2026</span><span>·</span><span>2 min read</span></div>
-              <h3>New partnership with FRSC to scale Safer Schools</h3>
-              <p>Expanding Safer Schools curricula into 60 additional public schools across the FCT.</p>
-              <a class="btn-link" href="#">Read more →</a>
-            </div>
-          </article>
+        <div class="cards-grid" id="news-grid">
+          <!-- Loaded dynamically from data/articles.json -->
         </div>
       </div>
     </section>
