@@ -3,257 +3,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Get involved with RAP Initiative — donate, volunteer, or partner with us." />
-  <title>Get Involved — RAP Initiative</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <title>Donate &amp; Get Involved — RAP Initiative</title>
+  <meta name="description" content="Donate to or volunteer with the Road Accident Prevention Initiative. Support safer roads in Nigeria." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <div>
-        <a href="mailto:hello@rapinitiative.org">hello@rapinitiative.org</a>
-        &nbsp;·&nbsp;
-        <a href="tel:+2348000000000">+234 (0) 800 000 0000</a>
-      </div>
-      <div class="socials">
-        <a href="https://x.com/RAPInitiativeHQ" aria-label="X (Twitter)" target="_blank" rel="noopener">X</a>
-        <a href="https://facebook.com/RAPInitiativeHQ" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://instagram.com/RAPInitiativeHQ" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://youtube.com/@RAPInitiativeHQ" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://tiktok.com/@RAPInitiativeHQ" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
-      </div>
-    </div>
-  </div>
 
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html"><img class="brand-logo" src="assets/logo.svg" alt="RAP Initiative" /></a>
-      <nav class="nav-menu" aria-label="Primary">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">RAP<span>Initiative</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="this.closest('header').querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
+        <a href="about.html">About Us</a>
+        <a href="campaigns.html">Campaigns</a>
         <a href="news.html">News</a>
-        <a href="get-involved.html" class="is-active">Get Involved</a>
+        <a href="safety-talks.html">Safety Talks</a>
         <a href="contact.html">Contact</a>
-      </nav>
-      <div class="nav-cta">
-        <a class="btn-link" href="get-involved.html#volunteer">Volunteer</a>
-        <a class="btn btn-primary" href="get-involved.html#donate">Donate</a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span></button>
+        <a href="get-involved.html" class="donate-btn active">Donate</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Get Involved</div>
-        <h1>Three ways to save lives on Nigerian roads.</h1>
-        <p>Give, volunteer, or partner with us. Every form of support flows directly into the work — and we're transparent about every naira.</p>
-      </div>
-    </section>
-
-    <section class="section" id="donate">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Donate</span>
-          <h2>Pick a tier — or set your own</h2>
-          <p>86¢ of every dollar goes directly to programs. The rest keeps the lights on, and we publish our books every quarter.</p>
-        </div>
-        <div class="donate-tiers">
-          <article class="tier reveal">
-            <span class="eyebrow" style="color:var(--rap-navy)">Spark</span>
-            <div class="price">$25<span style="font-size:.95rem;color:var(--muted);font-weight:400; -webkit-text-fill-color:var(--muted);"> / month</span></div>
-            <p>Funds a road safety workshop kit for one classroom — about 40 students.</p>
-            <ul><li>Workshop kit for 1 classroom</li><li>Quarterly impact report</li><li>Donor community newsletter</li></ul>
-            <a class="btn btn-secondary" href="#">Give monthly</a>
-          </article>
-          <article class="tier is-featured reveal">
-            <span class="eyebrow" style="color:var(--rap-red)">Catalyst</span>
-            <div class="price">$75<span style="font-size:.95rem;color:var(--muted);font-weight:400; -webkit-text-fill-color:var(--muted);"> / month</span></div>
-            <p>Powers a full school assembly + workshop reaching around 150 students.</p>
-            <ul><li>One Safer Schools session per month</li><li>Direct quarterly story from a school</li><li>Annual donor briefing call</li><li>Field-visit invitation (Abuja or Ibadan)</li></ul>
-            <a class="btn btn-primary" href="#">Become a Catalyst</a>
-          </article>
-          <article class="tier reveal">
-            <span class="eyebrow" style="color:var(--rap-navy)">Beacon</span>
-            <div class="price">$250<span style="font-size:.95rem;color:var(--muted);font-weight:400; -webkit-text-fill-color:var(--muted);"> / month</span></div>
-            <p>Underwrites a community-wide road safety campaign in one LGA.</p>
-            <ul><li>1 LGA campaign per month</li><li>Custom annual impact dossier</li><li>Strategy session with our team</li><li>Optional public recognition</li></ul>
-            <a class="btn btn-secondary" href="#">Become a Beacon</a>
-          </article>
-        </div>
-        <p class="text-center" style="margin-top:2rem; color:var(--muted)">Prefer one-time? <a class="btn-link" href="#">Make a one-time gift →</a></p>
-      </div>
-    </section>
-
-    <section class="section section--alt" id="volunteer">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Volunteer with us</span>
-          <h2>Volunteer registration</h2>
-          <p>Thank you for your interest in joining the <strong>RAP Initiative</strong>. Our mission is to create safer roads in Nigeria through education, advocacy, and community engagement.</p>
-        </div>
-
-        <form class="form-card volunteer-form reveal" data-demo aria-label="Volunteer registration form" action="#" method="POST">
-          <fieldset class="form-fieldset">
-            <legend><span class="leg-num">01</span> Personal information</legend>
-            <div class="form-grid">
-              <div class="field"><label for="fullname">Full name</label><input type="text" id="fullname" name="fullname" autocomplete="name" required aria-required="true" /></div>
-              <div class="field"><label for="dob">Date of birth</label><input type="date" id="dob" name="dob" required aria-required="true" /></div>
-              <div class="field">
-                <label id="gender-label">Gender</label>
-                <div class="radio-list is-inline" role="radiogroup" aria-labelledby="gender-label">
-                  <label class="radio-label"><input type="radio" name="gender" value="male" required aria-required="true" /> Male</label>
-                  <label class="radio-label"><input type="radio" name="gender" value="female" /> Female</label>
-                  <label class="radio-label"><input type="radio" name="gender" value="other" /> Prefer not to say</label>
-                </div>
-              </div>
-              <div class="field"><label for="occupation">Current occupation</label><input type="text" id="occupation" name="occupation" autocomplete="organization-title" required aria-required="true" /></div>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-fieldset">
-            <legend><span class="leg-num">02</span> Contact details</legend>
-            <div class="form-grid">
-              <div class="field"><label for="phone">Phone number</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" required aria-required="true" /></div>
-              <div class="field"><label for="email">Email address</label><input type="email" id="email" name="email" autocomplete="email" required aria-required="true" /></div>
-              <div class="field full"><label for="address">Residential address</label><input type="text" id="address" name="address" autocomplete="street-address" required aria-required="true" /></div>
-              <div class="field full">
-                <label for="location">Preferred location for volunteering</label>
-                <select id="location" name="location" required aria-required="true">
-                  <option value="">— Select a location —</option>
-                  <option value="abuja">Abuja (Wuse 2)</option>
-                  <option value="ibadan">Ibadan (Basorun Road)</option>
-                  <option value="remote">Remote / online</option>
-                </select>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-fieldset">
-            <legend><span class="leg-num">03</span> Areas of interest &amp; skills</legend>
-            <p class="fieldset-help">Which of our core areas would you like to support? Select all that apply.</p>
-            <div class="checkbox-list">
-              <label class="check-label"><input type="checkbox" name="interest[]" value="education" /> <span><strong>Road Safety Education</strong> — conducting school or community workshops.</span></label>
-              <label class="check-label"><input type="checkbox" name="interest[]" value="campaigns" /> <span><strong>Campaigns &amp; Advocacy</strong> — participating in public safety rallies and awareness drives.</span></label>
-              <label class="check-label"><input type="checkbox" name="interest[]" value="events" /> <span><strong>Event Planning</strong> — assisting in organising community events and seminars.</span></label>
-              <label class="check-label"><input type="checkbox" name="interest[]" value="media" /> <span><strong>Media &amp; Communications</strong> — content writing, graphic design, or photography.</span></label>
-              <label class="check-label"><input type="checkbox" name="interest[]" value="social_media" /> <span><strong>Social Media Management</strong> — spreading awareness via online platforms.</span></label>
-              <label class="check-label"><input type="checkbox" name="interest[]" value="admin" /> <span><strong>Administrative Support</strong> — data entry, coordination, and office assistance.</span></label>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-fieldset">
-            <legend><span class="leg-num">04</span> Experience &amp; availability</legend>
-            <div class="field">
-              <label id="exp-label">Do you have prior volunteering experience?</label>
-              <div class="radio-list is-inline" role="radiogroup" aria-labelledby="exp-label">
-                <label class="radio-label"><input type="radio" name="experience" value="yes" /> Yes</label>
-                <label class="radio-label"><input type="radio" name="experience" value="no" /> No</label>
-              </div>
-            </div>
-            <div class="field" style="margin-top:1rem"><label for="exp_details">If yes, please briefly describe your past role(s)</label><textarea id="exp_details" name="exp_details" rows="3" placeholder="Organisation, role, dates…"></textarea></div>
-            <div class="field" style="margin-top:1rem">
-              <label>What is your general availability? (Select all that apply.)</label>
-              <div class="checkbox-list">
-                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_mornings" /> Weekday mornings</label>
-                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_afternoons" /> Weekday afternoons</label>
-                <label class="check-label"><input type="checkbox" name="availability[]" value="weekday_evenings" /> Weekday evenings</label>
-                <label class="check-label"><input type="checkbox" name="availability[]" value="weekends" /> Weekends</label>
-                <label class="check-label"><input type="checkbox" name="availability[]" value="flexible" /> Flexible — can adjust to need</label>
-              </div>
-            </div>
-            <div class="field" style="margin-top:1rem">
-              <label for="hours">How many hours per week can you typically commit?</label>
-              <select id="hours" name="hours"><option value="">— Select —</option><option>1–5 hours</option><option>5–10 hours</option><option>10–20 hours</option><option>20+ hours</option><option>Flexible</option></select>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-fieldset">
-            <legend><span class="leg-num">05</span> Why volunteer with RAP?</legend>
-            <div class="field"><label for="motivation">In a few sentences, tell us what draws you to road safety advocacy and what you hope to contribute.</label><textarea id="motivation" name="motivation" rows="5" required aria-required="true"></textarea></div>
-            <div class="field" style="margin-top:1rem"><label for="referral">How did you hear about RAP Initiative? <span style="font-weight:500;color:var(--muted)">(optional)</span></label><input type="text" id="referral" name="referral" placeholder="Social media, friend, event, etc." /></div>
-          </fieldset>
-
-          <div class="declaration">
-            <strong>Declaration.</strong>
-            I confirm that the information provided above is accurate to the best of my knowledge. I understand that by volunteering with the RAP Initiative, I am committing to upholding the organisation's values of safety, dignity, and integrity. I consent to RAP Initiative storing my data for the purpose of volunteer coordination, in line with applicable data-protection laws.
-            <label><input type="checkbox" name="agree" required aria-required="true" /> I agree to the declaration above.</label>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center">Submit registration</button>
-          <p class="form-status" style="margin-top:.75rem; font-size:.9rem; text-align:center"></p>
-        </form>
-
-        <div class="office-grid reveal">
-          <div class="office-card"><h4>Abuja office</h4><p>Wuse 2, Abuja, FCT</p></div>
-          <div class="office-card"><h4>Ibadan office</h4><p>Basorun Road, Ibadan, Oyo State</p></div>
-          <div class="office-card"><h4>Volunteer enquiries</h4><p><a href="mailto:volunteer@rapinitiative.org">volunteer@rapinitiative.org</a></p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="partner">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Partnerships</span>
-          <h2>Safer roads need more than one set of hands</h2>
-          <p>We partner with foundations, companies, government agencies, transport unions, and schools — wherever the alignment is real and the commitment is long.</p>
-        </div>
-        <div class="pillars">
-          <article class="pillar reveal">
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg></div>
-            <h3>Foundations &amp; donors</h3>
-            <p>Multi-year grants for our flagship road-safety programs, with clear deliverables and quarterly reporting.</p>
-            <a class="btn-link" href="contact.html">Talk grants →</a>
-          </article>
-          <article class="pillar reveal">
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18l-2 13H5z"/><path d="M8 7V5a4 4 0 1 1 8 0v2"/></svg></div>
-            <h3>Corporate &amp; fleet</h3>
-            <p>Fleet safety programs, cause-aligned campaigns, employee giving, and skills-based volunteering.</p>
-            <a class="btn-link" href="contact.html">Discuss partnership →</a>
-          </article>
-          <article class="pillar reveal">
-            <div class="pillar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><circle cx="17" cy="11" r="3"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M22 21v-2a3 3 0 0 0-3-3"/></svg></div>
-            <h3>Government &amp; transport unions</h3>
-            <p>Joint programming with FRSC, state ministries, local government, transport unions, and schools.</p>
-            <a class="btn-link" href="contact.html">Co-design →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="col-brand brand-block">
-        <a href="index.html" class="brand"><img src="assets/logo.svg" alt="RAP Initiative" style="width:200px; filter: brightness(0) invert(1)" /></a>
-        <p>Safer roads. Stronger communities. Every journey home. RAP Initiative champions road safety across Nigeria through education, advocacy, and community engagement.</p>
-        <div class="socials">
-          <a href="https://x.com/RAPInitiativeHQ" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="https://facebook.com/RAPInitiativeHQ" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V14H10v8z"/></svg></a>
-          <a href="https://instagram.com/RAPInitiativeHQ" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="https://youtube.com/@RAPInitiativeHQ" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
-          <a href="https://tiktok.com/@RAPInitiativeHQ" aria-label="TikTok" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.14V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.66a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.84-.09z"/></svg></a>
-        </div>
-      </div>
-      <div><h4>Programs</h4><ul><li><a href="programs.html#education">Safer Schools</a></li><li><a href="programs.html#drivers">Safer Drivers</a></li><li><a href="programs.html#advocacy">Voices on the Road</a></li><li><a href="programs.html#community">Eyes on the Road</a></li></ul></div>
-      <div><h4>Organisation</h4><ul><li><a href="about.html">Our story</a></li><li><a href="about.html#team">Team</a></li><li><a href="#">Annual reports</a></li><li><a href="#">Press</a></li><li><a href="#">Careers</a></li></ul></div>
-      <div><h4>Get involved</h4><ul><li><a href="get-involved.html#donate">Donate</a></li><li><a href="get-involved.html#volunteer">Volunteer</a></li><li><a href="get-involved.html#partner">Partnerships</a></li><li><a href="contact.html">Contact us</a></li></ul></div>
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="section-label">Make a Difference</span>
+      <h1>Donate &amp;<br>Get Involved</h1>
+      <p>Your support funds life-saving campaigns, school programmes, and community outreach that reduce road deaths across Nigeria.</p>
     </div>
-    <div class="container footer-bottom">
-      <span>© <span data-year>2026</span> RAP Initiative. All rights reserved.</span>
-      <div class="legal"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a></div>
+  </section>
+
+  <section style="background:var(--black); padding: 5rem 2rem;">
+    <div style="max-width:1280px; margin:0 auto;">
+      <div class="reveal" style="margin-bottom:3rem;"><span class="section-label">Donate</span><h2 style="font-size:clamp(2rem,4vw,3.5rem);">Choose Your Impact</h2></div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2px;">
+        <div class="campaign-card reveal" style="text-align:center;"><div style="font-family:'Oswald',sans-serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">&#8358;5,000</div><h3 style="font-size:1.1rem; margin-bottom:0.75rem;">Supporter</h3><p>Funds reflective vests for 10 nighttime road users under the Be Seen Be Safe campaign.</p><a href="mailto:info@rapinitiative.org?subject=Donation%20-%20Supporter" class="btn btn-outline" style="margin-top:1.5rem; display:inline-block;">Donate</a></div>
+        <div class="campaign-card reveal" style="text-align:center; border-top:3px solid var(--gold);"><div style="font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; font-family:'Oswald',sans-serif;">Most Popular</div><div style="font-family:'Oswald',sans-serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">&#8358;25,000</div><h3 style="font-size:1.1rem; margin-bottom:0.75rem;">Champion</h3><p>Sponsors a school road safety assembly, reaching 200+ students with life-saving knowledge.</p><a href="mailto:info@rapinitiative.org?subject=Donation%20-%20Champion" class="btn btn-gold" style="margin-top:1.5rem; display:inline-block;">Donate</a></div>
+        <div class="campaign-card reveal" style="text-align:center;"><div style="font-family:'Oswald',sans-serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">&#8358;100,000</div><h3 style="font-size:1.1rem; margin-bottom:0.75rem;">Partner</h3><p>Funds a full community checkpoint event with signage, materials, and trained advocates.</p><a href="mailto:info@rapinitiative.org?subject=Donation%20-%20Partner" class="btn btn-outline" style="margin-top:1.5rem; display:inline-block;">Donate</a></div>
+        <div class="campaign-card reveal" style="text-align:center;"><div style="font-family:'Oswald',sans-serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">Custom</div><h3 style="font-size:1.1rem; margin-bottom:0.75rem;">Corporate / Major Gift</h3><p>Contact us to discuss a bespoke partnership, campaign sponsorship, or multi-year commitment.</p><a href="contact.html" class="btn btn-outline" style="margin-top:1.5rem; display:inline-block;">Get in Touch</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--dark); padding: 5rem 2rem 7rem;">
+    <div class="get-involved-form-section-inner">
+      <span class="section-label">Volunteer</span>
+      <h2 style="font-size:clamp(2rem,4vw,3rem); margin-bottom:0.75rem;">Join Our Team</h2>
+      <p style="color:var(--light-gray); max-width:55ch; line-height:1.7; margin-bottom:2.5rem;">Whether you can spare a few hours at a community event or commit to a longer-term role, we have a place for you. Fill in the form below and we'll be in touch.</p>
+      <form class="get-involved-form" onsubmit="handleVolunteer(event)">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-top:1rem;">
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+          </div>
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Phone Number" />
+          <input type="text" placeholder="City / State" />
+        </fieldset>
+        <fieldset>
+          <legend>Availability</legend>
+          <select><option value="" disabled selected>How much time can you give per month?</option><option>1–4 hours</option><option>5–10 hours</option><option>10–20 hours</option><option>20+ hours</option></select>
+          <select><option value="" disabled selected>Preferred campaign area</option><option>Buckle Up (Seatbelt Safety)</option><option>Cross Safely (Pedestrian Safety)</option><option>Slow Down (Speed Management)</option><option>Overtake Wisely (Lane Discipline)</option><option>Be Seen Be Safe (Visibility)</option><option>General / Any</option></select>
+        </fieldset>
+        <fieldset>
+          <legend>Skills &amp; Experience</legend>
+          <textarea placeholder="Tell us about any relevant skills, experience, or why you'd like to volunteer with us…"></textarea>
+        </fieldset>
+        <button type="submit" class="btn btn-gold">Submit Application</button>
+        <p id="vol-msg" style="display:none; color:var(--gold); font-size:0.9rem; margin-top:0.75rem;"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand"><a href="index.html" class="nav-logo">RAP<span>Initiative</span></a><p>Promoting safer roads across Nigeria through evidence-based campaigns, education, and community engagement.</p></div>
+        <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="campaigns.html">Campaigns</a></li><li><a href="news.html">News</a></li></ul></div>
+        <div class="footer-col"><h4>Programmes</h4><ul><li><a href="safety-talks.html">Safety Talks</a></li><li><a href="campaigns.html#buckle-up">Buckle Up</a></li><li><a href="campaigns.html#cross-safely">Cross Safely</a></li><li><a href="campaigns.html#slow-down">Slow Down</a></li></ul></div>
+        <div class="footer-col"><h4>Connect</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="get-involved.html">Donate</a></li><li><a href="mailto:info@rapinitiative.org">Email Us</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2024 Road Accident Prevention Initiative. All rights reserved.</p><p>Built with purpose — <a href="contact.html">get involved</a></p></div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    function handleVolunteer(e) {
+      e.preventDefault();
+      const msg = document.getElementById('vol-msg');
+      msg.textContent = 'Thank you for applying! We\'ll review your application and be in touch shortly.';
+      msg.style.display = 'block';
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
